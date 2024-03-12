@@ -157,7 +157,7 @@ body {
 @media screen and (max-width: 980px) {
     .game-window {
         width: 90%;
-        height: 80%;
+        height: 90%;
         position: absolute;
         left: 0;
         right: 0;
