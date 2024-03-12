@@ -168,19 +168,19 @@ body {
     }
 
     .game-title {
-        font-size: 36px;
+        font-size: 27px;
         color: var(--black);
         text-align: center;
         text-wrap: stable;
         padding-top: 6px;
-        margin-bottom: 30px;
+        margin: 0 10px 10px;
     }
 
     .player-result,
     .bot-result {
-        font-size: 24px;
+        font-size: 20px;
         font-weight: 500;
-        height: 70px;
+        height: 65px;
     }
 
     .play {
