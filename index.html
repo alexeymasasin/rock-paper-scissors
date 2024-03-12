@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body class="noselect">
+        <div class="container">
+            <div class="game-window">
+                <div class="game-window-top">
+                    <h2 class="game-title">Камень / ножницы / Бумага</h2>
+
+                    <div class="divider"></div>
+                    <p class="player-result">
+                        Ваш результат: <span class="player-figure">-</span>
+                    </p>
+                    <div class="divider"></div>
+                    <p class="bot-result">
+                        Результат противника: <span class="bot-figure">-</span>
+                    </p>
+                    <div class="divider"></div>
+                    <canvas id="result-box"></canvas>
+                    <p class="game-result">Нажмите "играть"</p>
+                </div>
+                <div class="game-window-bottom">
+                    <div class="play">
+                        <button class="play-btn noselect">Играть</button>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright-div">
+                <a
+                    href="https://github.com/alexeymasasin"
+                    target="_blank"
+                    class="copyright"
+                    >@alexeymasasin</a
+                >
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+        <script src="/app.js"></script>
+    </body>
+</html>

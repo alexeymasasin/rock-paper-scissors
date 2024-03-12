@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+:root {
+    --black: #101820;
+    --yellow: #fee715;
+    --white: #f0edee;
+    --light-gray: #d7d6d6;
+    --gray: #35383a;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+    user-select: none;
+}
+
+body {
+    background-color: var(--black);
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.container {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.game-window {
+    background-color: var(--light-gray);
+    width: 600px;
+    height: 320px;
+    margin: 50px 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: #02040f62 0 20px 100px 30px;
+    position: absolute;
+}
+
+.game-title {
+    font-size: 32px;
+    color: var(--black);
+    text-align: center;
+    padding-top: 6px;
+}
+
+.divider {
+    width: 100%;
+    height: 2px;
+    background-color: var(--black);
+    margin: 10px 0;
+}
+
+.player-result,
+.bot-result {
+    margin: 0 20px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.play {
+    margin: 0 auto 20px;
+}
+
+.play-btn {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--black);
+    color: var(--white);
+    font-size: 16px;
+    transition: 0.2s;
+    cursor: pointer;
+    font-family: "Open Sans", sans-serif;
+}
+
+.play-btn:hover {
+    background-color: #10161d;
+}
+
+.play-btn:active {
+    color: var(--yellow);
+}
+
+.game-result {
+    font-weight: 800;
+    font-size: 48px;
+    text-align: center;
+    color: var(--black);
+}
+
+.green {
+    color: #549f51;
+    transition: 0.4s;
+}
+
+.red {
+    color: #af4747;
+    transition: 0.4s;
+}
+
+.gray {
+    color: #54677e;
+    transition: 0.4s;
+}
+
+#result-box {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    /* background-color: #ffffff5d; */
+    width: 500px;
+    height: 100px;
+}
+
+.game-window-top {
+    position: relative;
+}
+
+.copyright-div {
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    top: 12px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.copyright {
+    color: var(--yellow);
+}
+
+.copyright:visited {
+    color: var(--yellow);
+}
+
+@media screen and (max-width: 980px) {
+    .game-window {
+        width: 90%;
+        height: 80%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .game-title {
+        font-size: 48px;
+        color: var(--black);
+        text-align: center;
+        text-wrap: stable;
+        padding-top: 6px;
+        margin-bottom: 30px;
+    }
+
+    .player-result,
+    .bot-result {
+        margin: 0 20px;
+        font-size: 24px;
+        font-weight: 500;
+        text-wrap: stable;
+    }
+
+    .play {
+        margin: 0 auto 30px;
+    }
+
+    .play-btn {
+        display: block;
+        margin: 0 auto;
+        padding: 10px 30px 15px;
+        border: none;
+        border-radius: 20px;
+        background-color: var(--black);
+        color: var(--white);
+        font-size: 32px;
+        transition: 0.2s;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .play-btn:hover {
+        background-color: #10161d;
+    }
+
+    .play-btn:active {
+        color: var(--yellow);
+    }
+
+    .game-result {
+        margin-top: 20px;
+        font-weight: 800;
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .green {
+        color: #549f51;
+        transition: 0.4s;
+    }
+
+    .red {
+        color: #af4747;
+        transition: 0.4s;
+    }
+
+    .gray {
+        color: #54677e;
+        transition: 0.4s;
+    }
+
+    #result-box {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        /* background-color: #ffffff5d; */
+        width: 500px;
+        height: 100px;
+    }
+
+    .game-window-top {
+        position: relative;
+    }
+}
