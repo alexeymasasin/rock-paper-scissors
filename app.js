@@ -24,6 +24,7 @@ function playAGame() {
             spread: 100,
             drift: 1,
             colors: ["#fee715", "#fee715", "#fee715", "#101820"],
+            particleCount: 200,
         });
     } else {
         gameResult.innerText = "Поражение";
