@@ -307,7 +307,7 @@ body {
         margin: 0 auto;
         padding: 10px 30px 15px;
         border: none;
-        border-radius: 30px;
+        border-radius: 20px;
         background-color: var(--black);
         color: var(--white);
         font-size: 32px;
