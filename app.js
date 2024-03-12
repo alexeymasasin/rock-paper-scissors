@@ -1,5 +1,3 @@
-require("canvas-confetti");
-
 const playBtn = document.querySelector(".play-btn");
 const playerResultText = document.querySelector(".player-figure");
 const botResultText = document.querySelector(".bot-figure");
