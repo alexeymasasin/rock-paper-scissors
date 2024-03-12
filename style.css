@@ -166,7 +166,7 @@ body {
     }
 
     .game-title {
-        font-size: 48px;
+        font-size: 36px;
         color: var(--black);
         text-align: center;
         text-wrap: stable;
@@ -176,10 +176,9 @@ body {
 
     .player-result,
     .bot-result {
-        margin: 0 20px;
         font-size: 24px;
         font-weight: 500;
-        text-wrap: stable;
+        height: 70px;
     }
 
     .play {
@@ -209,7 +208,7 @@ body {
     }
 
     .game-result {
-        margin-top: 20px;
+        margin: 20px 20px 020px;
         font-weight: 800;
         font-size: 36px;
         text-align: center;
