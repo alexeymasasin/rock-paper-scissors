@@ -1,34 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
     <head>
         <meta charset="UTF-8" />
         <meta
             name="viewport"
             content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=0"
         />
-        <title>Камень / ножницы / Бумага</title>
+        <title>Камень, ножницы, бумага</title>
         <link rel="stylesheet" href="./style.css" />
         <link rel="shortcut icon" href="./img/fist.png" type="image/x-icon" />
     </head>
     <body class="noselect">
         <div class="container">
+            <div class="rules-window hidden"></div>
+            <div class="gameover-window hidden">
+                <div class="gameover-items">
+                    <h2 class="gameover-title">
+                        Вы <span class="gameover-res-text"></span>!
+                    </h2>
+                    <p class="gameover-text">
+                        Игра окончена со счётом
+                        <span class="end-scores"></span>.
+                    </p>
+                    <button class="try-again-btn">Сыграть ещё раз</button>
+                    <p class="rules">Правила</p>
+                </div>
+            </div>
             <div class="game-window">
                 <div class="game-window-top">
                     <h2 class="game-title">Камень, ножницы, бумага</h2>
 
                     <div class="divider"></div>
                     <p class="player-result">
-                        Ваш результат: <span class="player-figure">-</span>
+                        Ваш результат<br /><span class="player-figure">-</span>
                     </p>
-                    <div class="divider"></div>
                     <p class="bot-result">
-                        Результат противника: <span class="bot-figure">-</span>
+                        Результат противника<br /><span class="bot-figure"
+                            >-</span
+                        >
                     </p>
                     <div class="divider"></div>
                     <canvas id="result-box"></canvas>
                     <p class="game-result">Нажмите "играть"</p>
                     <div class="play">
                         <button class="play-btn noselect">Играть</button>
+                    </div>
+                    <div class="divider"></div>
+
+                    <div class="total-score">
+                        <p class="scores">
+                            Счёт: <span class="player-score"></span> -
+                            <span class="bot-score"></span>
+                        </p>
+                        <button class="reset-scores-btn">Сбросить</button>
                     </div>
                 </div>
             </div>

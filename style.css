@@ -4,8 +4,9 @@
     --black: #101820;
     --yellow: #fee715;
     --white: #f0edee;
-    --light-gray: #d7d6d6;
-    --gray: #35383a;
+    --light-gray: #e3e9f5;
+    --gray: #6d7174;
+    --dark-gray: #595f68;
 }
 
 * {
@@ -39,10 +40,80 @@ body {
     margin: 0 auto;
 }
 
+.hidden {
+    visibility: hidden;
+}
+
+.rules-window {
+    width: 200px;
+    height: 100px;
+    background-color: #fff;
+    position: absolute;
+    z-index: 1000;
+}
+
+.gameover-window {
+    width: 600px;
+    height: 480px;
+    margin: 50px 20px;
+    border-radius: 15px;
+    box-shadow: #02040f62 0 20px 100px 30px;
+    position: absolute;
+
+    background-color: var(--yellow);
+    z-index: 900;
+    transition: visibility 0.3s linear;
+}
+
+.gameover-title {
+    font-size: 36px;
+    text-align: center;
+}
+
+.gameover-text {
+    text-align: center;
+}
+
+.gameover-items {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    height: 100%;
+    gap: 20px;
+}
+
+.try-again-btn {
+    display: block;
+    margin: 10px auto 0;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--black);
+    color: var(--white);
+    font-size: 16px;
+    transition: 0.2s;
+    cursor: pointer;
+    font-family: "Open Sans", sans-serif;
+    width: 150px;
+}
+
+.try-again-btn:hover {
+    background-color: var(--dark-gray);
+}
+
+.rules {
+    color: var(--dark-gray);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 .game-window {
     background-color: var(--light-gray);
     width: 600px;
-    height: 320px;
+    height: 480px;
     margin: 50px 20px;
     border-radius: 15px;
     display: flex;
@@ -61,7 +132,7 @@ body {
 
 .divider {
     width: 100%;
-    height: 2px;
+    height: 3px;
     background-color: var(--black);
     margin: 10px 0;
 }
@@ -71,10 +142,17 @@ body {
     margin: 0 20px;
     font-size: 18px;
     font-weight: 500;
+    text-align: center;
+}
+
+.player-figure,
+.bot-figure {
+    font-weight: 700;
+    font-size: 22px;
 }
 
 .play {
-    margin: 0 auto 20px;
+    margin: 0 auto 10px;
 }
 
 .play-btn {
@@ -156,7 +234,48 @@ body {
     color: var(--yellow);
 }
 
+.scores {
+    color: var(--black);
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.reset-scores-btn {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--dark-gray);
+    color: var(--white);
+    font-size: 16px;
+    transition: 0.2s;
+    cursor: pointer;
+    font-family: "Open Sans", sans-serif;
+}
+
+.reset-scores-btn:hover {
+    background-color: var(--dark-gray);
+}
+
+.reset-scores-btn:active {
+    color: var(--yellow);
+}
+
 @media screen and (max-width: 980px) {
+    .gameover-window {
+        width: 90%;
+        height: 90%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        z-index: 900;
+    }
+
     .game-window {
         width: 90%;
         height: 90%;
@@ -183,16 +302,12 @@ body {
         height: 65px;
     }
 
-    .play {
-        margin: 0 auto 30px;
-    }
-
     .play-btn {
         display: block;
         margin: 0 auto;
         padding: 10px 30px 15px;
         border: none;
-        border-radius: 20px;
+        border-radius: 30px;
         background-color: var(--black);
         color: var(--white);
         font-size: 32px;
@@ -207,6 +322,10 @@ body {
 
     .play-btn:active {
         color: var(--yellow);
+    }
+
+    .play {
+        margin: 0 auto 10px;
     }
 
     .game-result {
@@ -244,5 +363,25 @@ body {
 
     .game-window-top {
         position: relative;
+    }
+
+    .scores {
+        color: var(--black);
+        text-align: center;
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    .reset-scores-btn {
+        display: block;
+        margin: 0 auto;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 10px;
+        font-size: 16px;
+        transition: 0.2s;
+        cursor: pointer;
+        font-family: "Open Sans", sans-serif;
     }
 }
